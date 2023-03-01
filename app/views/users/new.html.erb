@@ -3,18 +3,20 @@
 <%= form_with(url: "/users" , method: :post) do |form| %>
 
     <%= form.label :name, "User Name:" %>
-    <%= form.text_field :name %>
+    <%= form.text_field name ="user[name]" %>
     <br>
-    <%= form.label :name, "Email:" %>
-    <%= form.email_field :email  %>
+    <%= form.label :email, "Email:" %>
+    <%= form.email_field name ="user[email]" %>
     <br>
-    <%= form.label :name, "Password:" %>
-    <%= form.password_field :password%>
+    <%= form.label :password, "Password:" %>
+    <%= form.password_field name ="user[password]"%>
     <br>
 
     <%= form.submit "Submit" %>
 
 <%end%>
+
+
 
 <h3> the end </h3>
 

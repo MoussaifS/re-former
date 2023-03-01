@@ -1,0 +1,26 @@
+<h1>The Form EDIT</h1>
+
+<%= @user.name %>
+
+<%= form_with model: @user  , method: :patch do |form| %>
+
+    <%= form.label :name, "User Name:"  %>
+    <%= form.text_field :name%>
+    <br>
+    <%= form.label :email, "Email:" %>
+    <%= form.email_field :email %>
+    <br>
+    <%= form.label :password, "Password:" %>
+    <%= form.password_field :password%>
+    <br>
+
+    <%= form.submit %>
+
+<%end%>
+
+
+
+
+
+<h3> THE RE-end </h3>
+
