@@ -2,9 +2,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user
-    else
-      render 'edit'
+      flash.now[:notice] = "We have exactly #{@user.errors} books available."
+      redirect_to "/users/new" , notice: "there is an error"
+    
+    else 
+      
     end
   end
   
